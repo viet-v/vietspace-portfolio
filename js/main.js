@@ -11,36 +11,35 @@ const hi = document.getElementById("hi");
 const introduce = document.getElementById("introduce");
 
 const hiValue = getComputedStyle(hi);
-const hiLeftValue = parseInt(hiValue.left);
+const hiLeftValue = parseInt(hiValue.left);  /* left position value of hero h1 */
 
 const introValue = getComputedStyle(introduce);
-const introRightValue = parseInt(introValue.right);
-console.log(hiLeftValue)
-console.log(introRightValue)
+const introRightValue = parseInt(introValue.right); /* right position value of hero p */
+
 
 vietspace.classList.add("hidden");
 brandLogo.classList.add("hidden");
 brandMobile.classList.add("hidden");
 
-navBars.addEventListener("click", function () {
+navBars.addEventListener("click", function () {   /* click hamburger menu */
     navMobile.classList.add("show");
     navMobile.classList.remove("hide");
     navOverlay.classList.add("fade-in");
 });
 
-navClose.addEventListener("click", function () {
+navClose.addEventListener("click", function () {  /* click mobile navigation close */
     navMobile.classList.add("hide");
     navMobile.classList.remove("show");
     navOverlay.classList.remove("fade-in");
 })
 
-navOverlay.addEventListener("click", function () {
+navOverlay.addEventListener("click", function () { /* shadow overlay when open mobile navigation */
     navMobile.classList.remove("show");
     navMobile.classList.add("hide");
     navOverlay.classList.remove("fade-in");
 })
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {     /* sticky navigation bar on scroll effect */
     if (window.scrollY > 0) {
         navDesktop.classList.add("nav-background");
         stickyBarMobile.classList.add("nav-background");
@@ -62,8 +61,7 @@ window.addEventListener("scroll", function () {
     }
 })
 
-window.addEventListener("scroll", function () {
-    // hi.style("left", Math.max(500 - 0.35*window.scrollY) + "px");
+window.addEventListener("scroll", function () {        /* parallax scrolling effect */
     const value = window.scrollY;
     hi.style.left = hiLeftValue - value + 'px';
     introduce.style.right = introRightValue - value + 'px';

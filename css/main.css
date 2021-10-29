@@ -89,6 +89,7 @@ textarea {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -355,6 +356,10 @@ header .wrapper {
   cursor: pointer;
 }
 
+.project-button button:active {
+  transform: scale(0.6);
+}
+
 .project-button a {
   color: #ceeaf7;
   font-size: 0.875em;
@@ -391,6 +396,11 @@ header .wrapper {
   background: url('../img/sticky-notes.jpg');
   background-size: cover;
   border: 1px solid #143d59;
+}
+
+.project1-img:hover, .project2-img:hover, .project3-img:hover, .project4-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 /* -------------------- Skills mobile -------------------- */
@@ -434,6 +444,11 @@ header .wrapper {
 #adobe, #responsive {
   width: 48px;
   height: 48px;
+}
+
+#adobe:hover, #responsive:hover, .skill-element i:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
 }
 
 /* -------------------- About mobile -------------------- */
@@ -497,6 +512,11 @@ header .wrapper {
 #linkedin, #github, #behance {
   font-size: 3em;
   color: #143d59;
+}
+
+#linkedin i:active, #github i:active, #behance i:active {
+  transform: scale(0.8);
+  transition: transform 0.2s;
 }
 
 address {
@@ -634,6 +654,10 @@ address {
 
   #nav-bars, #nav-close {
     font-size: 2em;
+  }
+
+  .nav-mobile nav ul li a {
+    font-size: 1.125em;
   }
 
 /* -------------------- Projects tablet -------------------- */
@@ -777,6 +801,16 @@ address {
 
   .nav-pc ul li {
     list-style-type: none;
+  }
+
+  .nav-pc ul li a {
+    box-shadow: inset 0 0 0 0 #143d59;
+  }
+
+  .nav-pc ul li a:hover {
+    box-shadow: inset 0 0 0 30px #143d59;
+    color: #ceeaf7;
+    transition: ease-out 0.2s;
   }
 
   .nav-pc ul li a, .brand span {
