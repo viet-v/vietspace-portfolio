@@ -486,6 +486,7 @@ header .wrapper {
 
 .about-text p {
   font-size: 0.875em;
+  line-height: 1.625em;
   color: #ceeaf7;
   margin: 0 0 50px 0;
 }
