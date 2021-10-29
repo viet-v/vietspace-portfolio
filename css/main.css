@@ -126,8 +126,38 @@ header .wrapper {
   color: #143d59;
 }
 
+/* ------------v Navigation for mobile & tablet v------------ */
 .nav-pc {
   display: none;
+}
+
+#sticky-bar-mobile {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 5;
+}
+
+#sticky-bar-mobile img {
+  width: 20px;
+  height: 20px;
+}
+
+#sticky-bar-mobile span {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #143d59;
+}
+
+.nav-background {      /* sticky bar background on scroll */
+  background: linear-gradient(to bottom, #ceeaf7, #ceeaf7, transparent);
+}
+
+.brand-mobile {
+  position: absolute;
+  top: 10px;
+  left: 30px;
 }
 
 .nav-mobile {
@@ -138,7 +168,7 @@ header .wrapper {
   width: 50%;
   background-color: #ceeaf7;
   z-index: 5;
-  transform: translateX(100%);
+  transform: translateX(100%);  /* mobile navigation at first slide out */
 }
 
 .nav-mobile nav ul {
@@ -165,14 +195,14 @@ header .wrapper {
 #nav-bars, #nav-close {
   position: absolute;
   top: 10px;
-  right: 10px;
-  font-size: 2em;
+  right: 30px;
+  font-size: 1.5em;
   color: #143d59;
   z-index: 4;
   cursor: pointer;
 }
 
-.nav-overlay {
+.nav-overlay {           /* black overlay on main site when view nav */
   position: fixed;
   top: 0; bottom: 0;
   right: 0; left: 0;
@@ -206,6 +236,8 @@ header .wrapper {
   }
 }
 
+/* ------------^ Navigation for mobile & tablet ^------------ */
+
 .hero {
   width: 100%;
   height: 240px;
@@ -236,7 +268,7 @@ header .wrapper {
   font-weight: 500;
   position: absolute;
   top: 5%; 
-  left: 32%;
+  left: 130px;
   margin: 0;
   z-index: 1;
 }
@@ -246,10 +278,11 @@ header .wrapper {
   font-style: italic;
   position: absolute;
   bottom: 18%;
-  right: 13%;
+  right: 30px;
   margin: 0;
   z-index: 3;
 }
+
 
 /* -------------------- Projects mobile -------------------- */
 
@@ -591,9 +624,15 @@ address {
   
   .hero h1 {
     font-size: 3.125em;
+    left: 280px;
   }
   
   .hero p {
+    font-size: 2em;
+    right: 50px;
+  }
+
+  #nav-bars, #nav-close {
     font-size: 2em;
   }
 
@@ -680,10 +719,17 @@ address {
 
   .hero h1 {
     font-size: 5em;
+    left: 450px;
   }
 
   .hero p {
     font-size: 3.125em;
+    right: 200px;
+  }
+
+  /* ------------v Navigation for desktop v------------ */
+  #sticky-bar-mobile {
+    display: none;
   }
 
   .nav-pc {
@@ -715,7 +761,7 @@ address {
   }
 
   .brand, .nav-pc nav {
-    width: 30%;
+    width: 40%;
   }
 
   .brand img {
@@ -744,6 +790,7 @@ address {
   .nav-background {
     background: linear-gradient(to bottom, #ceeaf7, #ceeaf7, transparent);
   }
+  /* ------------^ Navigation for desktop ^------------ */
 
 
   /* -------------------- Projects desktop -------------------- */

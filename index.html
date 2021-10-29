@@ -42,7 +42,13 @@
           </ul>
         </nav>
       </div>
-      <i class="fas fa-bars" id="nav-bars"></i>
+      <div id="sticky-bar-mobile">
+        <div class="brand-mobile">
+          <span>vietspace</span>
+          <img src="img/logo.svg" alt="vietspace logo">
+        </div>
+        <i class="fas fa-bars" id="nav-bars"></i>
+      </div>
       <div class="nav-mobile">
         <nav>
           <ul>
@@ -56,7 +62,8 @@
       </div>
       <div class="nav-overlay"></div>
 
-      <h1>Hi,<br>
+      <h1 id="hi">
+        Hi,<br>
         I'm Viet</h1>
       <p id="introduce">a passionate <br>front end developer</p>
       <img src="img/lake.png" alt="Beautiful lake" id="lake">
@@ -208,7 +215,7 @@
 
 
 
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js" defer></script>
