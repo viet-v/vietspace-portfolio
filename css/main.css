@@ -379,7 +379,7 @@ header .wrapper {
 
 .project2-img {
   height: 140px;
-  background: url('../img/guess-the-word.jpg') center;
+  background: url('../img/sticky-notes.jpg');
   background-size: cover;
   border: 1px solid #143d59;
 }
@@ -393,12 +393,25 @@ header .wrapper {
 
 .project4-img {
   height: 140px;
-  background: url('../img/sticky-notes.jpg');
+  background: url('../img/guess-the-word.jpg') center;
   background-size: cover;
   border: 1px solid #143d59;
 }
 
-.project1-img:hover, .project2-img:hover, .project3-img:hover, .project4-img:hover {
+.project5-img {
+  height: 140px;
+  background: url('../img/unplugged.jpg') center;
+  background-size: cover;
+  border: 1px solid #143d59;
+}
+
+#project5 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project1-img:hover, .project2-img:hover, .project3-img:hover, .project4-img:hover, .project5-img:hover {
   transform: scale(1.1);
   transition: transform 0.2s;
 }
@@ -668,6 +681,10 @@ address {
     height: 420px;
   }
 
+  #project5 .project-board {
+    width: 320px;
+  }
+
   .projects .wrapper {
     justify-content: space-between;
   }
@@ -728,7 +745,6 @@ address {
 
 @media only screen and (min-width: 1200px) { /* ========== Desktop style here ========== */
   .wrapper {
-    width: 85%;
     max-width: 800px;
   }
 
@@ -744,7 +760,7 @@ address {
 
   .hero h1 {
     font-size: 5em;
-    left: 450px;
+    left: 550px;
   }
 
   .hero p {
