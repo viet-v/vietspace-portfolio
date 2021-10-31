@@ -341,7 +341,9 @@ header .wrapper {
   margin: 14px 0;
 }
 
-.project-button button {
+.project-button a {
+  text-align: center;
+  line-height: 30px;
   background-color: #143d59;
   width: 66px;
   height: 30px;
@@ -351,12 +353,12 @@ header .wrapper {
   transition: ease-out 0.3s;
 }
 
-.project-button button:hover {
+.project-button a:hover {
   box-shadow: inset 66px 0 0 0 #fcc729;
   cursor: pointer;
 }
 
-.project-button button:active {
+.project-button a:active {
   transform: scale(0.6);
 }
 
