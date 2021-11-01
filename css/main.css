@@ -503,7 +503,7 @@ header .wrapper {
   font-size: 0.875em;
   line-height: 1.625em;
   color: #ceeaf7;
-  margin: 0 0 50px 0;
+  margin: 50px 0 50px 0;
 }
 
 .about h2, .skills h2, .contact h2 {
@@ -727,6 +727,7 @@ address {
 
   .about-text p {
     font-size: 1em;
+    margin: 0 0 50px 0;
   }
 
 /* -------------------- Contact tablet -------------------- */
