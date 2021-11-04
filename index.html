@@ -13,6 +13,7 @@
   <meta property="og:url" content="https://vietspace.me/">
   <meta property="og:image" content="https://vietspace.me/img/hero-image.jpg">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -208,11 +209,11 @@
       <div class="wrapper">
         <h2 class="section-title">ABOUT</h2>
         <div class="about-details">
-          <div class="about-photos">
+          <div class="about-photos" data-aos="fade-right" data-aos-duration="1000">
             <div class="photo1"></div>
             <div class="photo2"></div>
           </div>
-          <div class="about-text">
+          <div class="about-text" data-aos="fade-up" data-aos-duration="1000">
             <p>Nothing makes me feel more fulfilled than actively contributing positive impacts. Tech is the place I find my motivation and creativity flows, and I believe with the right blend with interpersonal skills, it could bring solutions to all life problems.<br><br>
               With 3+ years of teamwork in multiple environments, I step into tech as a fast learner and always open to new lessons.<br><br>
               When I’m not working, you can find me dancing, enjoying nature or maybe cooking!
@@ -244,6 +245,11 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>
