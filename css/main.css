@@ -278,7 +278,7 @@ header .wrapper {
   font-size: 1em;
   font-style: italic;
   position: absolute;
-  bottom: 18%;
+  bottom: 25%;
   right: 30px;
   margin: 0;
   z-index: 3;
@@ -378,46 +378,48 @@ header .wrapper {
 
 .project1-img {
   height: 140px;
-  background: url('../img/giupbankhoehon.jpg') center;
+  background: url('../img/SMP.jpg') bottom;
   background-size: cover;
   border: 1px solid #143d59;
 }
 
 .project2-img {
   height: 140px;
-  background: url('../img/sticky-notes.jpg');
+  background: url('../img/giupbankhoehon.jpg') center;
   background-size: cover;
   border: 1px solid #143d59;
 }
 
 .project3-img {
   height: 140px;
-  background: url('../img/github-repo-gallery.jpg') center;
+  background: url('../img/sticky-notes.jpg');
   background-size: cover;
   border: 1px solid #143d59;
 }
 
 .project4-img {
   height: 140px;
-  background: url('../img/guess-the-word.jpg') center;
+  background: url('../img/github-repo-gallery.jpg') center;
   background-size: cover;
   border: 1px solid #143d59;
 }
 
 .project5-img {
   height: 140px;
+  background: url('../img/guess-the-word.jpg') center;
+  background-size: cover;
+  border: 1px solid #143d59;
+}
+
+.project6-img {
+  height: 140px;
   background: url('../img/unplugged.jpg') center;
   background-size: cover;
   border: 1px solid #143d59;
 }
 
-#project5 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-.project1-img:hover, .project2-img:hover, .project3-img:hover, .project4-img:hover, .project5-img:hover {
+.project1-img:hover, .project2-img:hover, .project3-img:hover, .project4-img:hover, .project5-img:hover, .project6-img:hover {
   transform: scale(1.1);
   transition: transform 0.2s;
 }
@@ -709,9 +711,9 @@ address {
     height: 420px;
   }
 
-  #project5 .project-board {
+  /* #project5 .project-board {
     width: 320px;
-  }
+  } */
 
   .projects .wrapper {
     justify-content: space-between;
