@@ -21,25 +21,25 @@ vietspace.classList.add("hidden");
 brandLogo.classList.add("hidden");
 brandMobile.classList.add("hidden");
 
-navBars.addEventListener("click", function () {   /* click hamburger menu */
+navBars.addEventListener("click", () => {   /* click hamburger menu */
     navMobile.classList.add("show");
     navMobile.classList.remove("hide");
     navOverlay.classList.add("fade-in");
 });
 
-navClose.addEventListener("click", function () {  /* click mobile navigation close */
+navClose.addEventListener("click", () => {  /* click mobile navigation close */
     navMobile.classList.add("hide");
     navMobile.classList.remove("show");
     navOverlay.classList.remove("fade-in");
 })
 
-navOverlay.addEventListener("click", function () { /* shadow overlay when open mobile navigation */
+navOverlay.addEventListener("click", () => { /* shadow overlay when open mobile navigation */
     navMobile.classList.remove("show");
     navMobile.classList.add("hide");
     navOverlay.classList.remove("fade-in");
 })
 
-window.addEventListener("scroll", function () {     /* sticky navigation bar on scroll effect */
+window.addEventListener("scroll", () => {     /* sticky navigation bar on scroll effect */
     if (window.scrollY > 0) {
         navDesktop.classList.add("nav-background");
         stickyBarMobile.classList.add("nav-background");
@@ -61,7 +61,7 @@ window.addEventListener("scroll", function () {     /* sticky navigation bar on 
     }
 })
 
-window.addEventListener("scroll", function () {        /* parallax scrolling effect */
+window.addEventListener("scroll", () => {        /* parallax scrolling effect */
     const value = window.scrollY;
     hi.style.left = hiLeftValue - value + 'px';
     introduce.style.right = introRightValue - value + 'px';
