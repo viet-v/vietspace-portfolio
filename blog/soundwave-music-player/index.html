@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundwave Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/38863ae954.js" defer></script>
+</head>
+<body>
+    <div id="sticky-bar-mobile">
+      <a href="../../">
+        <div class="brand-mobile">
+          <span>vietspace</span>
+          <img src="../../img/logo.svg" alt="vietspace logo">
+        </div>
+      </a>
+      <i class="fas fa-bars" id="nav-bars"></i>
+    </div>
+    <div class="nav-mobile">
+      <nav>
+        <ul>
+          <li><a href="../../#projects">PROJECTS</a></li>
+          <li><a href="../">BLOG</a></li>
+          <li><a href="../../#about">ABOUT</a></li>
+          <li><a href="../../#contact">CONTACT</a></li>
+          <li><a href="../../Viet-Vo-Hoang-Front-End-Developer-Resume.pdf" target="_blank">RESUME</a></li>
+        </ul>
+      </nav>
+      <i class="fas fa-times" id="nav-close"></i> 
+    </div>
+    <div class="nav-overlay"></div>
+
+    <div class="content">
+        <h1 class="heading">I built a minimal music player from scratch</h1>
+        <p class="intro">
+            <span class="date">
+                January 24, 2022<br>
+                8:00 PM
+            </span><br><br>
+            Following tutorials is not my thing. I find it really tiresome to follow and copy every line of code without fully understanding the function of each one. Even when I meet an incredible problem and have to copy someone else’s code, I try to understand those lines first. That way I can rewrite the code more concisely without losing the function, and most of all, I understand what’s happening in my project.</p>
+        <p>    
+            I decided to build a greenfield project surrounding music. I love building from scratch, that way every character in HTML, CSS and JavaScript files flows from my brain and I can control the possible bugs.<br>
+            <br>
+            I love music with visualization like the dancing circle on NCS channel. This time I choose wave bars.
+        </p>
+
+        <div class="sketch">
+          <img src="sketch.jpg" alt="Sketch">
+        </div>
+        <p>I started with a piece of paper and a pen, drew exactly like in my imagination, took a photo, imported to Photoshop and from that designed a high fidelity mockup.<br>
+          It didn’t take more than 1 hour to finish the mockup because I am so used to designing web pages with Photoshop. Before that I used Adobe XD or Figma. But Photoshop is more versatile.<br>
+          And here it is.</p>
+        <div class="mockup">
+          <img src="SMP.jpg" alt="Design mockup">
+        </div>
+        <p>See? It’s super simple. I love minimalism!</p>
+
+        <p>Honestly, the hardest part is getting started. One of our biggest enemies is procrastination 😬<br>
+          Once I got the momentum, it took me less than 2 days to turn that image into a live interactive product.<br>
+          On that way, the trickiest part I could say is making these bars move dynamically to the audio frequencies.<br>
+          I found two tutorials on YouTube, their result is not what I was trying to make but I just needed to get the idea and the tools they use. Thankfully they explain so clearly.</p>
+        
+        <div class="youtube">
+          <img src="youtube1.jpg" alt="Tutorial 1">
+          <img src="youtube2.jpg" alt="Tutorial 2">
+        </div>
+        <p><i>(Giving them credit)</i></p>
+
+        <p>From their code, I combined them into the version that fits me the most and I’m so happy to get the core idea behind these moving visualizations.<br>
+          (from making videos, solving a problem to building an application, it’s all about the core idea. There are plenty of tools, but we won’t know how and which one to use without the core idea)<br>
+          <br>
+          I research MDN Web Docs to know more about the built in methods on audio element. I’m excited to broaden my knowledge and see how it works in reality.<br>
+          <br>
+          After making sure the music playing function is well set, I moved to the last step of retrieving random photo from Unsplash API for the background.<br>
+          Then tada!! It’s launched!</p>
+
+         <iframe src="https://viet-v.github.io/soundwave-music-player/" width="80%" height="600px" frameborder="0">Soundwave Music Player</iframe>
+
+         <p>I know my product is still not versatile, it can’t display well on multiple devices and there are not many functionalities. But this is my original style and I will improve it more!</p>
+         <p><b>Thank you for reaching here. Give it a try and I hope you like it!</b></p>
+
+
+
+    </div>
+
+    <footer>
+      <div class="contact" id="contact">
+        <div class="wrapper">
+          <h2 class="section-title">LET'S CONNECT!</h2>
+          <address>
+            <a href="mailto:vohoangviet459@gmail.com" target="_blank" id="mail">vohoangviet459@gmail.com</a>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/vo-hoang-viet/" target="_blank" id="linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/viet-v" target="_blank" id="github"><i class="fab fa-github"></i></a>
+              <a href="https://www.behance.net/viet-vo-hoang " target="_blank" id="behance"><i class="fab fa-behance-square"></i></a>
+            </div>
+          </address>
+          <p id="copyright">Copyright © 2022 | Viet Vo Hoang</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navBars = document.getElementById("nav-bars");
+      const navClose = document.getElementById("nav-close");
+      const navMobile = document.querySelector(".nav-mobile");
+      const navOverlay = document.querySelector(".nav-overlay");
+      const stickyBarMobile = document.getElementById("sticky-bar-mobile");
+      
+      navBars.addEventListener("click", () => {   /* click hamburger menu */
+          navMobile.classList.add("show");
+          navMobile.classList.remove("hide");
+          navOverlay.classList.add("fade-in");
+      });
+
+      navClose.addEventListener("click", () => {  /* click close mobile navigation */
+          navMobile.classList.add("hide");
+          navMobile.classList.remove("show");
+          navOverlay.classList.remove("fade-in");
+      })
+
+      navOverlay.addEventListener("click", () => { /* click shadow overlay when open mobile navigation */
+          navMobile.classList.remove("show");
+          navMobile.classList.add("hide");
+          navOverlay.classList.remove("fade-in");
+      })
+
+      window.addEventListener("scroll", () => {     /* sticky navigation bar on scroll effect */
+          if (window.scrollY > 0) {     
+              stickyBarMobile.classList.add("nav-background");
+          } else {
+              stickyBarMobile.classList.remove("nav-background");
+          }
+      })
+    </script>
+</body>
+</html>

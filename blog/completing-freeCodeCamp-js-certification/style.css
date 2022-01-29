@@ -163,6 +163,7 @@ blockquote {
 
 blockquote a {
     text-decoration: none;
+    color: #143d59;
 }
 
 .explain {
