@@ -18,6 +18,7 @@ html {
 }
 
 ::selection {
+  color: #143d59;
   background: #b3d4fc;
   text-shadow: none;
 }
