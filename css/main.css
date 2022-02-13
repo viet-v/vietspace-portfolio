@@ -435,31 +435,16 @@ header .wrapper {
   background-color: #143d59;
 }
 
+
 .about-photos {
-  position: relative;
-  height: 205px;
+  float: left;
+  margin-bottom: 2em;
 }
 
-.photo1 {
-  position: absolute;
-  width: 200px;
-  height: 120px;
-  top: 0;
-  left: 0;
-  background: url('../img/me-1.jpg');
-  background-size: cover;
+.about-photos img {
+  max-width: 100%;
 }
 
-.photo2 {
-  position: absolute;
-  width: 105px;
-  height: 175px;
-  bottom: 0;
-  right: 0;
-  background: url('../img/me-2.webp') right;
-  background-size: cover;
-
-}
 
 .about-text p {
   font-size: 0.875em;
@@ -596,10 +581,6 @@ address {
     height: 420px;
   }
 
-  /* #project5 .project-board {
-    width: 320px;
-  } */
-
   .projects .wrapper {
     justify-content: space-between;
   }
@@ -624,18 +605,9 @@ address {
 
 /* -------------------- About tablet -------------------- */
 
-  .about-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0;
-  }
-
   .about-photos {
-    width: 37%;
-  }
-
-  .about-text {
     width: 50%;
+    margin-right: 2em;
   }
 
   .about-text p {
@@ -774,6 +746,22 @@ address {
 
   #adobe, #responsive {
     margin: 16px 0;
+  }
+
+  /* -------------------- About desktop -------------------- */  
+
+  .about-photos {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-photos img {
+    filter: grayscale(80%);
+    transition: all 0.5s ease;
+  }
+
+  .about-photos:hover img {
+    filter: none;
   }
 
 }
