@@ -112,6 +112,11 @@ html, body {
   
   /* -------------------------------------------------- */
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
 .container {
     position: relative;
     overflow: hidden;
@@ -145,11 +150,6 @@ html, body {
     text-align: center;
 }
 
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-}
-
 .blog-container {
     display: flex;
     align-items: center;
@@ -168,6 +168,7 @@ p {
     justify-content: center;
     box-shadow: 0px 5px 15px 1px grey;
     height: 150px;
+    width: 100%;
     transition: all 0.2s ease;
 }
 
@@ -175,19 +176,13 @@ p {
     transform: translateY(-10px)
 }
 
-#img1 {
-    background: url('completing-freeCodeCamp-js-certification/freeCodeCamp-certification.png') center no-repeat;
-    background-size: cover;
-}
-
-#img2 {
-    background: url('soundwave-music-player/SMP.jpg') center no-repeat;
-    background-size: cover;
-}
-
 .blog-img {
-    width: 30%;
-    height: auto;
+  width: 30%;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
 }
 
 .description {
@@ -209,6 +204,44 @@ p {
         margin: -200px 0 0 0;
     }
 }
+
+@media only screen and (max-width: 768px) {
+  .blog-box {
+    height: 200px;
+  }
+  
+  .blog-img {
+    width: 50%;
+  }
+
+  .description {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  
+  .introduction {
+    padding: 20px 40px;
+  }
+
+  .blog-box {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .blog-img {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
 
 /* ---------------------- CONTACT -------------------------- */
 .contact {
