@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My coding blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/38863ae954.js" defer></script>
+</head>
+<body>
+    <div id="sticky-bar-mobile">
+        <a href="../">
+          <div class="brand-mobile">
+            <span>vietspace</span>
+            <img src="../img/logo.svg" alt="vietspace logo">
+          </div>
+        </a>
+        <i class="fas fa-bars" id="nav-bars"></i>
+      </div>
+    <div class="nav-mobile">
+        <nav>
+          <ul>
+            <li><a href="../#projects">PROJECTS</a></li>
+            <li><a href="../#about">ABOUT</a></li>
+            <li><a href="../#contact">CONTACT</a></li>
+            <li><a href="../Viet-Vo-Hoang-Front-End-Developer-Resume.pdf" target="_blank">RESUME</a></li>
+          </ul>
+        </nav>
+        <i class="fas fa-times" id="nav-close"></i> 
+      </div>
+    <div class="nav-overlay"></div>
+
+    <div class="container">
+        <video id="video" muted autoplay loop>
+            <source src="coding-background.mp4" type="video/mp4" />
+        </video>
+        <div class="title">
+            <h1>my coding blog</h1>
+        </div>
+        <h2 class="introduction">
+            As a person who likes jotting down special events, I came up with the idea of recording the learning to code journey. Better late than never.
+        </h2>
+        <article class="blog-container">
+            <a href="soundwave-music-player/" class="blog">
+                <article class="blog-box">
+                    <div class="blog-img">
+                      <img src="soundwave-music-player/SMP.jpg" alt="Soundwave Music Player app" id="img2">
+                    </div>
+                    <div class="description">
+                      <div class="description-title">
+                        <b>I built a minimal music player from scratch</b>
+                      </div>    <br>
+                      <div class="description-text">
+                        From the love with music and visualization, I came up with this idea to build a minimal music player with dynamic sound waves.
+                      </div>
+                    </div>
+                </article>        
+            </a>
+            <a href="completing-freeCodeCamp-js-certification/" class="blog">
+                <article class="blog-box">
+                    <div class="blog-img">
+                      <img src="completing-freeCodeCamp-js-certification/freeCodeCamp-certification.png" alt="freeCodeCamp certification" id="img1">
+                    </div>
+                    <div class="description">
+                      <div class="description-title">
+                        <b>Completing the freeCodeCamp JavaScript Algorithms and Data Structures Certification</b>
+                      </div>    <br>
+                      <div class="description-text">
+                        During one month with freeCodeCamp I learned a lot more to consolidate my JavaScript foundation.
+                      </div>
+                    </div>
+                </article>        
+            </a>
+        </article>
+        <p class="outtro">And more to come!<br>...</p>
+    </div>
+
+    <footer>
+        <div class="contact" id="contact">
+          <div class="wrapper">
+            <h2 class="section-title">LET'S CONNECT!</h2>
+            <address>
+              <a href="mailto:vohoangviet459@gmail.com" target="_blank" id="mail">vohoangviet459@gmail.com</a>
+              <div class="socials">
+                <a href="https://www.linkedin.com/in/vo-hoang-viet/" target="_blank" id="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/viet-v" target="_blank" id="github"><i class="fab fa-github"></i></a>
+                <a href="https://www.behance.net/viet-vo-hoang " target="_blank" id="behance"><i class="fab fa-behance-square"></i></a>
+              </div>
+            </address>
+            <p id="copyright">Copyright © 2022 | Viet Vo Hoang</p>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        const navBars = document.getElementById("nav-bars");
+        const navClose = document.getElementById("nav-close");
+        const navMobile = document.querySelector(".nav-mobile");
+        const navOverlay = document.querySelector(".nav-overlay");
+        const stickyBarMobile = document.getElementById("sticky-bar-mobile");
+
+        // document.getElementById('video').play();
+        
+        navBars.addEventListener("click", () => {   /* click hamburger menu */
+            navMobile.classList.add("show");
+            navMobile.classList.remove("hide");
+            navOverlay.classList.add("fade-in");
+        });
+  
+        navClose.addEventListener("click", () => {  /* click close mobile navigation */
+            navMobile.classList.add("hide");
+            navMobile.classList.remove("show");
+            navOverlay.classList.remove("fade-in");
+        })
+  
+        navOverlay.addEventListener("click", () => { /* click shadow overlay when open mobile navigation */
+            navMobile.classList.remove("show");
+            navMobile.classList.add("hide");
+            navOverlay.classList.remove("fade-in");
+        })
+  
+        window.addEventListener("scroll", () => {     /* sticky navigation bar on scroll effect */
+            if (window.scrollY > 0) {     
+                stickyBarMobile.classList.add("nav-background");
+            } else {
+                stickyBarMobile.classList.remove("nav-background");
+            }
+        })
+    </script>
+</body>
+</html>
