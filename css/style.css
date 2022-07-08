@@ -1,0 +1,120 @@
+@import url("https://use.typekit.net/uqx8pzr.css");
+
+:root {
+    --bg-color: #CFC9BC;
+    --typewriteSpeed: 4s;
+    --typewriteCharacters: 25;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: nitti-typewriter-cameo, sans-serif;
+    font-size: 45px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    width: max-content;
+}
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+h1::before {
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriteSpeed) steps(var(--typewriteCharacters)) 1s forwards;
+}
+h1::after {
+    width: 0.125em;
+    background-color: #000000;
+    animation: 
+        typewriter var(--typewriteSpeed) steps(var(--typewriteCharacters)) 1s forwards,
+        blink 700ms steps(var(--typewriteCharacters)) infinite;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_about,
+.text_contact {
+    font-family: interstate, sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: 
+        fadeInUp 2s ease calc(var(--typewriteSpeed) + 1s) forwards;
+}
+
+.text_contact a {
+    color: var(--bg-color);
+}
+.text_contact img {
+    width: 100%;
+    max-width: 30px;
+}
+.text_contact span {
+    font-size: 16px;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateX(3rem);
+    animation: 
+        fadeInLeft 2s ease calc(var(--typewriteSpeed) + 1s) forwards;
+}
+
+footer {
+    padding-top: 100px;
+}
+footer p {
+    font-family: interstate, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+    to {
+        background-color: transparent;
+    }
+}
+@keyframes  fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
