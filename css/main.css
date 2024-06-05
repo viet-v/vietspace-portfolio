@@ -428,6 +428,7 @@ header .wrapper {
   transition: transform 0.2s;
 }
 
+
 /* -------------------- About mobile -------------------- */
 
 .about {
@@ -435,16 +436,31 @@ header .wrapper {
   background-color: #143d59;
 }
 
-
 .about-photos {
-  float: left;
-  margin-bottom: 2em;
+  position: relative;
+  height: 205px;
 }
 
-.about-photos img {
-  max-width: 100%;
+.photo1 {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  top: 0;
+  left: 0;
+  background: url('../img/me-1.jpg');
+  background-size: cover;
 }
 
+.photo2 {
+  position: absolute;
+  width: 105px;
+  height: 175px;
+  bottom: 0;
+  right: 0;
+  background: url('../img/me-2.jpg') right;
+  background-size: cover;
+
+}
 
 .about-text p {
   font-size: 0.875em;
@@ -605,15 +621,24 @@ address {
 
 /* -------------------- About tablet -------------------- */
 
-  .about-photos {
-    width: 50%;
-    margin-right: 2em;
-  }
+.about-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
 
-  .about-text p {
-    font-size: 1em;
-    margin: 0 0 50px 0;
-  }
+.about-photos {
+  width: 37%;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-text p {
+  font-size: 1em;
+  margin: 0 0 50px 0;
+}
 
 /* -------------------- Contact tablet -------------------- */
 
